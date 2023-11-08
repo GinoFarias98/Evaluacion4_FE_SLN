@@ -79,14 +79,15 @@ namespace Evaluacion4_BE
             return UsuarioLista;
         }
 
-        public Usuario BuscarContrasena(string aContrasena)
+        public Usuario BuscarContrasena(string aUsuario, string aContrasena)
         {
-            string Contrasenna = aContrasena;
+            string Usuario = aUsuario;
+            string contrasena = aContrasena;
             Usuario ContraseñaLista = new Usuario();
 
             foreach (DataRow fila in ListadorUsuariosDT.Rows)
             {
-                if (fila["Usuario"].ToString() == Contrasenna)
+                if (fila["Usuario"].ToString() == Usuario & fila["Contraseña"].ToString() == contrasena)
                 {
                     ContraseñaLista.Codigo = (Convert.ToInt32(fila["Codigo"]));
                     ContraseñaLista.NombreUsuario = (fila["Usuario"].ToString());

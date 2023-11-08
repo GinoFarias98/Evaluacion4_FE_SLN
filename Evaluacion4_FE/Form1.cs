@@ -112,7 +112,7 @@ namespace Evaluacion4_FE
                 Error = true;
             }
 
-            Usuario usu1 = ListillaF1.BuscarContrasena(TxtUsuario.Text);
+            Usuario usu1 = ListillaF1.BuscarUsuario(TxtUsuario.Text);//, TxtContrasena.Text);
             if (usu1.Contrasena != TxtContrasena.Text)
             {
                 errorProvider1.SetError(TxtContrasena, "Contraseña erronea, intente nuevamente.");
@@ -120,7 +120,7 @@ namespace Evaluacion4_FE
             }
             return Error;
 
-
+            //formulario1
 
 
         }
